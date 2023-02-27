@@ -1,0 +1,39 @@
+<nav class="navbar">
+    <div class="container">
+        <!-- navbar logo -->
+        <h1 class="navbar_logo">
+            <a href="{% url 'website.home' %}"><span>Ze</span>Fiy</a>
+        </h1>
+        <!-- navbar links -->
+        <ul class="navbar_links">
+            <li class="navbar_links_item active">
+                <a href="{% url 'website.home' %}" class="navbar_link">Home</a>
+            </li>
+            <li class="navbar_links_item">
+                <a href="{% url 'website.about' %}" class="navbar_link">About us</a>
+            </li>
+            <li class="navbar_links_item">
+                <a href="{% url 'website.services' %}" class="navbar_link">Services</a>
+            </li>
+            <li class="navbar_links_item">
+                <span class="navbar_link">More</span>
+                <ul class="navbar_links_dropdown">
+                    <li class="navbar_links_dropdown_item">
+                        <a href="#" class="navbar_links_dropdown_link">Demo 1</a>
+                    </li>
+                    <li class="navbar_links_dropdown_item">
+                        <a href="#" class="navbar_links_dropdown_link">Demo 2</a>
+                    </li>
+                    <li class="navbar_links_dropdown_item">
+                        <a href="#" class="navbar_links_dropdown_link">Demo 3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- navbar actions -->
+        <div class="navbar_actions">
+            <a href="#" class="btn btn-primary-outline">Contact</a>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+</nav>

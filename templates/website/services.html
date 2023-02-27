@@ -1,0 +1,42 @@
+{% extends "./layout/page.html" %} {% block content %}
+<!-- #################
+    ##	hero area start	##
+    ################# -->
+<header class="hero hero-page" style="--bg: url('../images/services.jpg')">
+  <div class="container">
+    <div class="hero_breadcrumb">
+      <a href="{% url 'website.home' %}">home</a>
+      <i class="bi bi-chevron-right hero_breadcrumb_divider"></i>
+      <span>services</span>
+    </div>
+    <h2 class="hero_title">Our <span>Services</span></h2>
+    <p class="hero_description">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit sunt
+      suscipit minus eum doloribus odit id officia totam delectus sed.
+    </p>
+  </div>
+</header>
+<!-- hero area end -->
+<!-- #################
+    ##	services area start	##
+    ################# -->
+<section class="block">
+  <div class="container">
+    <!-- services content area -->
+    <div class="services_content">
+      {% for service in services %}
+      <article class="card card-type-2 card-type-1" id="{{ service.id }}">
+        <div class="card_media">
+          <span class="card_icon material-icons">{{ service.icon }}</span>
+        </div>
+        <div class="card_content">
+          <h2 class="card_title">{{ service.title }}</h2>
+          <p class="card_text">{{ service.text }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- services area end -->
+{% endblock content %}
